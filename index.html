@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+
+    <style>
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        #btn{
+            font-family: monospace;
+            font-size: 20px;
+            padding: 16px 30px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.518);
+            color: rgb(0, 0, 0);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: .5s;
+        }
+        #btn:hover{
+            transition: .5s;
+            background-color: rgba(0, 0, 0, 0.708);
+            box-shadow: 6px 6px;
+            color: rgba(255, 255, 255, 0.697);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <button id="btn" onclick="flip()">New Color</button>
+    </div>
+
+    <script>
+        function flip(){
+            document.body.style.backgroundColor = 'rgb(' + Math.round(Math.random() *255) + ',' + Math.round(Math.random() * 255) + ',' + Math.round(Math.random() * 255);
+        }
+        flip();
+    </script>
+    
+</body>
+</html>
